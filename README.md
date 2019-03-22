@@ -12,7 +12,7 @@ Use case:
 As part of Insight program 
 
 Tech Stack:
-1- Python \n
+1- Python
 2- Apach Flask
 3- Postgrece
 4- Spark
