@@ -8,8 +8,7 @@ When it comes to widely availablity  of data sources it comes to Data Catalog, D
 4- What action should be taken when there is a change on a data source?
 5- What the impcat of that change on other dependant data source?
 
-Use case:
-As part of Insight program 
+
 
 Tech Stack:
 1- Python
@@ -35,4 +34,11 @@ In this use case I aim to catalog these data sets ara available on previouse sou
     c- notifiy subscribed fellows if there change on a dataset.  
 3- Allow the fellows to search for a specfic a dataset by name or category.
 4- Allow the fellows to add a new dataset if it's not exist in the Datacatalog.
+
+Engineering Chalanges:
+1- since the datasets live across different sources
+    a- each source has it's own chracterstic and customization.
+    b- each dataset has different formats and extension (CSV, JSON,and etc).
+2- Size: most of dataset are very huage  (hundred of GB, terabyte) which requered a better utlization for resources during  moving it from source to Datacatalog.        
+    
 
