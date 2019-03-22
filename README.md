@@ -20,4 +20,4 @@ Tech Stack:
 6- APIs
 
 
-![Image description] https://raw.githubusercontent.com/m00236484/Data-Catalog/master/Datacatalog.jpg
+![Stack] https://raw.githubusercontent.com/m00236484/Data-Catalog/master/Datacatalog.jpg
