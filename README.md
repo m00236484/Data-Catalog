@@ -24,7 +24,7 @@ Tech Stack:
 Business Value:
 
 Use Case:
-As fellow in Insight Data Engineer Program one of challange that face data-enginer and data-sintest is geting a setable and reliable dataset and based on that this use case as part of the Data catalog roadmap it will help Insightdata fellows to have an plateform that opens to sources of datasets such as AWS Public Dataset, US Governmet Open DataSets, and etc.
+As fellow in Insight Data Engineer Program one of challanges that data-enginers and data-sintests facing is geting a setable and reliable dataset and based on that this use case as part of the Data catalog roadmap it will help Insightdata fellows to have an plateform that opens to sources of datasets such as AWS Public Dataset, US Governmet Open DataSets, and etc.
 
 In this use case I aim to catalog these data sets ara available on previouse sources and avilabilty to:
 1- Extract the available datasets into Datacatalog S3.
