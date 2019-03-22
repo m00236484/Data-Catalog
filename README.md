@@ -21,3 +21,18 @@ Tech Stack:
 
 
 ![image] https://raw.githubusercontent.com/m00236484/Data-Catalog/master/Datacatalog.jpg
+
+Business Value:
+
+Use Case:
+As fellow in Insight Data Engineer Program one of challange that face data-enginer and data-sintest is geting a setable and reliable dataset and based on that this use case as part of the Data catalog roadmap it will help Insightdata fellows to have an plateform that opens to sources of datasets such as AWS Public Dataset, US Governmet Open DataSets, and etc.
+
+In this use case I aim to catalog these data sets ara available on previouse sources and avilabilty to:
+1- Extract the available datasets into Datacatalog S3.
+2- Sunc periodicly with the datasets sources to capture whatever changes and does:
+    a- create a new dataset if there is a new dataset on the source
+    b- add a new version if existing dataset has been updated and linage between the master and versions.
+    c- notifiy subscribed fellows if there change on a dataset.  
+3- Allow the fellows to search for a specfic a dataset by name or category.
+4- Allow the fellows to add a new dataset if it's not exist in the Datacatalog.
+
