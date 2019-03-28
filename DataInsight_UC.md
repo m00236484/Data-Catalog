@@ -4,7 +4,7 @@ the fellow will be able to seach for a specfic datasets on the data catlog or he
 that the Data-Catalog has access on.
 
 
-[logo]: https://github.com/m00236484/Data-Catalog/raw/master/resources/ "Logo Title Text 2"
+[logo]: https://github.com/m00236484/Data-Catalog/blob/master/resources/Untitled%20Diagram.jpg "Logo Title Text 2"
 
 ## Functionality
 
