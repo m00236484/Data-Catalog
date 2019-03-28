@@ -3,8 +3,12 @@ The objective of this use case is to help Datainsight fellows to get a centrlize
 the fellow will be able to seach for a specfic datasets on the data catlog or he cn search for this dataset on other datasources 
 that the Data-Catalog has access on.
 
+## Arch
+![Image of DC](https://github.com/m00236484/Data-Catalog/blob/master/resources/Untitled%20Diagram.jpg)
 
-![alt text]: (https://github.com/m00236484/Data-Catalog/blob/master/resources/Untitled%20Diagram.jpg) "Data catalog"
+
+## Tech Stak
+![Image of Tech](https://github.com/m00236484/Data-Catalog/blob/master/Datacatalog.jpg)
 
 ## Functionality
 
