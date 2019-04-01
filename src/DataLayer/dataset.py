@@ -14,26 +14,53 @@ class DataSetTag(self):
         self.tag = tag
         self.tageUpdated = upDate
 
+class DsResources(self):
+    def __init__(self):
+        self.id = None
+        self.ds_id = None
+        self.ds_type = None
+        self.url = None
+        self.insert_date=None
+        self.last_update= None
+
+    def setDsResources(self,ds_id,ds_type,url,insert_date,update_date):
+        self.ds_id = ds_id
+        self.ds_type = ds_type
+        self.url = url
+        self.insert_date=inser_date
+        self.last_update=update_date
+
 class DataSet(self):
     def __init__(self):
         self.id = None
+        self.ds_src_id = None
+        self.ds_type = None
         self.name= None
-        self.url = None
         self.desc = None
+        self.url = None
+        self.adpter_type_id = None
+        self.store = None
+        self.refresh_frq = None
         self.license = None
-        self.owner = None
-        self.resource = None
+        #self.owner = None
+        #self.resource = {}
         self.format = None
-        self.locationTypoe = None
-        self.location = {}
+        #self.locationTypoe = None
+        #self.location = {}
+        self.insert_date = None
+        self.last_update = None
 
     def generateID(self):
          return self.idd
 
-    def setDataSet(self,dsName, dsUrl, dsDesc,licese, owner,resource, format, locationType, location):
+    def setDataSet(self,ds_src_id , ds_type ,ds_type ,   dsName, dsUrl, dsDesc,adpter_type_id,store,licese, owner,resource, format, locationType, location):
+         self.ds_src_id = ds_src_id
+         self.ds_type = ds_type
          self.name = dsName
          self.desc= dsDesc
          self.url = dsUrl
+         self.adpter_type_id =adpter_type_id
+         self.store = store
          self.license = licese
          self.owner = owner
          self.resource = resource
