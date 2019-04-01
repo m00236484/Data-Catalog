@@ -3,20 +3,23 @@
 
 class DataSetTag(self):
     def __init__(self):
-        self.dsId = None
-        self.dsTag = None
-        self.dsTageUpdated = None
+        self.id = None
+        self.tag = None
+        self.tageUpdated = None
+
+
+
     def setDsTag(self, id, tag,upDate):
-        self.dsId = id
-        self.dsTag = tag
-        self.dsTageUpdated = upDate
+        self.id = id
+        self.tag = tag
+        self.tageUpdated = upDate
 
 class DataSet(self):
     def __init__(self):
-        self.dsId = None
-        self.dsName= None
-        self.dsUrl = None
-        self.dsDesc = None
+        self.id = None
+        self.name= None
+        self.url = None
+        self.desc = None
         self.license = None
         self.owner = None
         self.resource = None
@@ -25,12 +28,12 @@ class DataSet(self):
         self.location = {}
 
     def generateID(self):
-         return self.dsId
+         return self.idd
 
     def setDataSet(self,dsName, dsUrl, dsDesc,licese, owner,resource, format, locationType, location):
-         self.dsName = dsName
-         self.dsDesc= dsDesc
-         self.dsUrl = dsUrl
+         self.name = dsName
+         self.desc= dsDesc
+         self.url = dsUrl
          self.license = licese
          self.owner = owner
          self.resource = resource
