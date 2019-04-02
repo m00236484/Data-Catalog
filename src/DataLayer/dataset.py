@@ -7,8 +7,6 @@ class DataSetTag(self):
         self.tag = None
         self.tageUpdated = None
 
-
-
     def setDsTag(self, id, tag,upDate):
         self.id = id
         self.tag = tag
@@ -27,7 +25,7 @@ class DsResources(self):
         self.ds_id = ds_id
         self.ds_type = ds_type
         self.url = url
-        self.insert_date=inser_date
+        self.insert_date=insert_date
         self.last_update=update_date
 
 class DataSet(self):
