@@ -28,9 +28,9 @@ class FdaAdapter():
                 for i in  dataset['partitions']:
                     url =  i['file']
                     print "Download File :" + url
-                    #r = requests.get(url)
+                    #r = requests.get(url, "~/tmp")
                     filename = wget.download(url)
-                    sDir=ds +'/'+filename
+                    sDir= 'fda' + '/'+ category + '/' +ds +'/'+filename
                     s3.upload_file(filename, "datainsight-dc", sDir)
                     os.remove(filename)
                     #print(r.text)
