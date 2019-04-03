@@ -1,6 +1,6 @@
-from  dataLayer.dataSetDM import DataSet
 
-class DataSetBl:
+from dataLayer.dataSetDM import DataSetTag
+class DataSetBl(self):
     def __init__(self, id = None):
         self.id = id
 
@@ -12,7 +12,10 @@ class DataSetBl:
         print datasets
 
 
+
+
 if __name__ == '__main__':
-    dbconn = DataSetBl()
-    dbconn.getDataSet()
+    db = DataSetBl()
+    db.getDataSet()
+
 
