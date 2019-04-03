@@ -1,4 +1,4 @@
-from  DataLayer import DataSet
+from  dataLayer.dataSetDM import DataSet
 
 class DataSetBl:
     def __init__(self, id = None):
