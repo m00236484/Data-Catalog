@@ -70,7 +70,7 @@ class DbManager:
             #id  = cur.fetchone()[0]
             # commit changes
             self.conn.commit()
-            print "Commit"
+            #print "Commit"
             #result = json.dumps(cur.fetchone()[0], indent=2)
             #self.desConnect()
             return id
