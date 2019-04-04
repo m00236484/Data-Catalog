@@ -56,7 +56,7 @@ class FdaAdapter():
                     Print (" Downloading from:" + str(url))
                     filename = wget.download(url)
                     sDir= str("fda/"+ str(category) + "/" +str(ds) +"/"+str(filename))
-                    Print
+
                     print "\n"
 
                     #print sDir
