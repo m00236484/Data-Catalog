@@ -23,7 +23,7 @@ class DbManager:
             # connect to the PostgreSQL server
             print('Connecting to the PostgreSQL database...')
             #conn = psycopg2.connect(**params)
-            conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host =dbhost, port=dbport)
+                conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host =dbhost, port=dbport)
             # create a cursor
             cur = conn.cursor()
 
@@ -61,12 +61,18 @@ class DbManager:
         if self.conn is None:
             self.connect()
 
-        cur = self.conn.cursor(cursor_factory=RealDictCursor)
-        cur.execute(sql)
+        try:
+            cur = self.conn.cursor()
+            cur.execute(sql)
+            id  = cur.fetchone()[0]
+            # commit changes
+            self.conn.commit()
 
-        #result = json.dumps(cur.fetchone()[0], indent=2)
-        #self.desConnect()
-        return result
+            #result = json.dumps(cur.fetchone()[0], indent=2)
+            #self.desConnect()
+            return id
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
 
 
     def connect(self):
