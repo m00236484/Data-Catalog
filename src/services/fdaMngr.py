@@ -60,7 +60,7 @@ class FdaAdapter():
                     print "\n"
 
                     #print sDir
-                    print "Upload to S3 : " + sdir + "\n"
+                    print "Upload to S3 : " + sDir + "\n"
                     s3.upload_file(filename, "datainsight-dc", sDir)
                     os.remove(filename)
                     #print(r.text)
