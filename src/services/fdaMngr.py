@@ -46,15 +46,21 @@ class FdaAdapter():
                 dss = DataSetBl()
                 name = "fda/"  + str(category) + "/" + str(ds)
                 store = "fda/"  + str(category) + "/" + str(ds)
-                print "\n Dataset name :" + name + ", Datasource:" + category +"\n  Downloading from:\n" + url
+                print "\n Dataset name :" + name + ", Datasource:" + category +"\n"
                 dss.setDataSet(ds_src_id ,ds_type ,str(name) ,dsUrl,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
                     #print "Download File :" + url
                     #r = requests.get(url, "~/tmp")
+
+                    Print " Downloading from:" + url
                     filename = wget.download(url)
                     sDir= str("fda/"+ str(category) + "/" +str(ds) +"/"+str(filename))
+                    Print
+                    print "\n"
+
                     #print sDir
+                    print "Upload to S3 : " + sdir + "\n"
                     s3.upload_file(filename, "datainsight-dc", sDir)
                     os.remove(filename)
                     #print(r.text)
