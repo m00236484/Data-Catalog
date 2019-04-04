@@ -38,10 +38,26 @@ class DataSet:
         return  len(datasets)
 
     def createDataSet(self, ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq ):
-        sql = "insert into dataset( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values ("+ str(ds_src_id) +"," + str(ds_type) +"," \
-                                                                                            "" + str(name)  +"," + str(url) +"," +  str(adpter_type_id) + ", " + str(store)  + ", "+ str(refesh_frq) + ",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP  ) ;"
+        '''
+        #sql = "insert into dataset( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values ("+ str(ds_src_id) +"," + str(ds_type) +"," \
+        #"" + str(name)  +"," + str(url) +"," +  str(adpter_type_id) + ", " + str(store)  + ", "+ str(refesh_frq) + ",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP  ) ;"
 
-        datasets = self.dbconn.insExec(sql)
+        :param ds_src_id:
+        :param ds_type:
+        :param name:
+        :param url:
+        :param adpter_type_id:
+        :param store:
+        :param refesh_frq:
+        :return:
+        '''
+
+
+        sql = "insert into dataset( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+
+        data = (ds_src_id, ds_type , name, url,adpter_type_id, store, refesh_frq , "CURRENT_TIMESTAMP","CURRENT_TIMESTAMP"  )
+
+        datasets = self.dbconn.insExec(sql , data)
 
 
 

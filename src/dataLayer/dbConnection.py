@@ -57,7 +57,7 @@ class DbManager:
 
 
 
-    def insExec(self, sql ):
+    def insExec(self, sql , data ):
         #print("##### SQL To Execute #####")
         #print(sql)
         result ={}
@@ -66,7 +66,7 @@ class DbManager:
 
         try:
             cur = self.conn.cursor()
-            cur.execute(sql)
+            cur.execute(sql, data)
             #id  = cur.fetchone()[0]
             # commit changes
             self.conn.commit()
