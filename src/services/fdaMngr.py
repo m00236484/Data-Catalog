@@ -4,6 +4,8 @@ import requests
 import wget
 import boto3
 import os
+import sys
+from businessLayer.dataSetBL import DataSetBl
 
 class FdaAdapter():
     def __init__(self):
@@ -21,10 +23,31 @@ class FdaAdapter():
         # Get the service client
         s3 = boto3.client('s3')
         sDir = ''
+        #ds_src_id ,ds_type ,name ,   url  ,adpter_type_id  , store  , refesh_frq   ,insert_date ,  last_update
+
+        ds_src_id = 1
+        ds_type = 1
+        name = ""
+
+        # dataset name should be generated from code below
+
+        url = "'some Url'" #where dataset live ,
+        adpter_type_id = 1 #,
+        store = ""
+        refesh_frq = 1
+
         for category  in data['results'].keys():
+            # by category name get source
             dataSets = data['results'][category]
             for ds in dataSets.keys():
                 dataset = dataSets[ds]
+
+                # Dataset insert ot update last update
+                ds = DataSetBl()
+                name = "'fda/"  + str(category) + "/" + str(ds) +"'"
+                store = "'fda/"  + str(category) + "/" + str(ds) +"'"
+
+                ds.setDataSet(ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
                     print "Download File :" + url

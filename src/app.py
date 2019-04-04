@@ -1,11 +1,9 @@
-
-
-
 import sys, os
-a = sys.path.append(os.path.dirname(os.path.realpath(__file__)) )
-print (a)
-# import someFileNameWhichIsInTheFolder
+
+from businessLayer.dataSetBL import DataSetBl
+from services.fdaMngr import FdaAdapter
 
 
 if __name__ == '__main__':
-    print (1)
+    fdAd = FdaAdapter()
+    fdAd.processResponse(fdAd.getDsRequest())

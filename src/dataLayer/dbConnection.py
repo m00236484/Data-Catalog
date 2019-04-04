@@ -1,7 +1,10 @@
 #!/usr/bin/python
-import psycopg2
 from psycopg2.extras import RealDictCursor
-import os
+import psycopg2
+import datetime
+import json
+
+
 #from config import config
 import json
 
@@ -40,24 +43,29 @@ class DbManager:
 
 
     def sqlExec(self, sql ):
+        print ("##### SQL To Execute #####")
+        print(sql)
         if self.conn is None:
             self.connect()
 
         cur = self.conn.cursor(cursor_factory=RealDictCursor)
         cur.execute(sql)
 
-        result = json.dumps(cur.fetchall(), indent=2)
+        result = json.dumps(cur.fetchall(), indent=4,  default=str)
         self.desConnect()
         return result
     def insExec(self, sql ):
+        print("##### SQL To Execute #####")
+        print(sql)
+        result ={}
         if self.conn is None:
             self.connect()
 
         cur = self.conn.cursor(cursor_factory=RealDictCursor)
         cur.execute(sql)
 
-        result = json.dumps(cur.fetchone()[0], indent=2)
-        self.desConnect()
+        #result = json.dumps(cur.fetchone()[0], indent=2)
+        #self.desConnect()
         return result
 
 
@@ -95,7 +103,3 @@ class DbManager:
             self.conn.close()
             print('Database connection closed.')
 
-if __name__ == '__main__':
-    dbconn = DbConnect()
-    dbconn.connect()
-    dbconn.desConnect()

@@ -1,8 +1,7 @@
-import psycopg2
-from psycopg2.extras import RealDictCursor
+
 from dbConnection import DbManager
 
-class DataSet(self):
+class DataSet:
     def __init__(self):
         self.id = None
         self.ds_src_id = None
@@ -21,23 +20,55 @@ class DataSet(self):
         #self.location = {}
         self.insert_date = None
         self.last_update = None
+        self.dbconn = DbManager()
 
     def generateID(self):
          return self.idd
 
+    def checkDataSet(self, id=None , name = None):
+        datasets = {}
+        if id:
+            sql = "select * from dataset where id = " + id
+        elif not id  and name :
+            sql = "select * from dataset where name = '" + name + "'"
+        else:
+            return 0
+
+        datasets = self.dbconn.sqlExec(sql)
+        return  len(datasets)
+
+    def createDataSet(self, ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq ):
+        sql = "insert into dataset( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values ("+ str(ds_src_id) +"," + str(ds_type) +"," \
+                                                                                            "" + str(name)  +"," + str(url) +"," +  str(adpter_type_id) + ", " + str(store)  + ", "+ str(refesh_frq) + ",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP  ) ;"
+
+        datasets = self.dbconn.insExec(sql)
+
+
+
+    def updateDataSet(self , ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq):
+        sql = "update dataset  set last_update = CURRENT_TIMESTAMP ;"
+        datasets = self.dbconn.sqlExec(sql)
+
+    def isDataSet(self, ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq ):
+        if self.checkDataSet() < 1 and (name != None and name != ''):
+            self.createDataSet(ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq )
+        else:
+            self.updateDataSet(ds_src_id, ds_type, name, url, adpter_type_id, store, refesh_frq)
+
+
 
     def getAll(self):
         datasets = {}
-        dbconn = DbManager()
-        datasets = dbconn.sqlExec("select * from dataset")
+
+        datasets = self.dbconn.sqlExec("select * from dataset")
         return datasets
 
 
     #get data sets by src id
-    def getDataSet(self,ds_src_id, id , dsName):
+    #def getDataSet(self,ds_src_id, id , dsName):
 
 
-    def setDataSet(self,ds_src_id , ds_type ,ds_type ,   dsName, dsUrl, dsDesc,adpter_type_id,store,licese, owner,resource, format, locationType, location):
+    def setDataSet(self,ds_src_id , ds_type , dsName, dsUrl, dsDesc,adpter_type_id,store,licese, owner,resource, format, locationType, location):
         self.ds_src_id = ds_src_id
         self.ds_type = ds_type
         self.name = dsName
@@ -53,7 +84,7 @@ class DataSet(self):
         self.location = location
 
 
-class DataSetTag(self):
+class DataSetTag:
     def __init__(self):
         self.id = None
         self.tag = None
@@ -64,7 +95,7 @@ class DataSetTag(self):
         self.tag = tag
         self.tageUpdated = upDate
 
-class DsResources(self):
+class DsResources:
     def __init__(self):
         self.id = None
         self.ds_id = None
