@@ -53,7 +53,7 @@ class FdaAdapter():
                     print "Download File :" + url
                     #r = requests.get(url, "~/tmp")
                     filename = wget.download(url)
-                    sDir= str('fda' + '/'+ category + '/' +ds +'/'+filename)
+                    sDir= str("fda/"+ str(category) + "/" +str(ds) +"/"+str(filename))
                     s3.upload_file(filename, "datainsight-dc", sDir)
                     os.remove(filename)
                     #print(r.text)
