@@ -31,7 +31,7 @@ class FdaAdapter():
 
         # dataset name should be generated from code below
 
-        url = "'some Url'" #where dataset live ,
+        dsUrl = "'some Url'" #where dataset live ,
         adpter_type_id = 1 #,
         store = ""
         refesh_frq = 1
@@ -47,7 +47,7 @@ class FdaAdapter():
                 name = "'fda/"  + str(category) + "/" + str(ds) +"'"
                 store = "'fda/"  + str(category) + "/" + str(ds) +"'"
 
-                ds.setDataSet(ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq)
+                ds.setDataSet(ds_src_id ,ds_type ,name ,dsUrl,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
                     print "Download File :" + url
