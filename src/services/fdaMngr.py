@@ -44,7 +44,7 @@ class FdaAdapter():
 
                 # Dataset insert ot update last update
                 ds = DataSetBl()
-                name = "'fda/"  + str(category) + "/" + str(ds) +"'"
+                name = "'fda/"  + str(category) + "//" + str(ds) +"'"
                 store = "'fda/"  + str(category) + "/" + str(ds) +"'"
                 print name
                 ds.setDataSet(ds_src_id ,ds_type ,str(name) ,dsUrl,adpter_type_id ,store  ,refesh_frq)

@@ -21,14 +21,14 @@ class DbManager:
             #params = config()
 
             # connect to the PostgreSQL server
-            print('Connecting to the PostgreSQL database...')
+            #print('Connecting to the PostgreSQL database...')
             #conn = psycopg2.connect(**params)
             conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host =dbhost, port=dbport)
             # create a cursor
             cur = conn.cursor()
 
             # execute a statement
-            print('PostgreSQL database version:')
+            #print('PostgreSQL database version:')
             cur.execute('SELECT version()')
 
             # display the PostgreSQL database server version
@@ -86,19 +86,19 @@ class DbManager:
             #params = config()
 
             # connect to the PostgreSQL server
-            print('Connecting to the PostgreSQL database...')
+            #print('Connecting to the PostgreSQL database...')
             #conn = psycopg2.connect(**params)
             conn = psycopg2.connect(dbname="datacatalog", user="postgres", password="postgres", host = "ec2-34-211-128-184.us-west-2.compute.amazonaws.com" , port="5432")
             # create a cursor
             cur = conn.cursor()
 
             # execute a statement
-            print('PostgreSQL database version:')
+            #print('PostgreSQL database version:')
             cur.execute('SELECT version()')
 
             # display the PostgreSQL database server version
             db_version = cur.fetchone()
-            print(db_version)
+            #print(db_version)
 
             # close the communication with the PostgreSQL
             self.conn = conn
