@@ -53,7 +53,7 @@ class FdaAdapter():
                     #print "Download File :" + url
                     #r = requests.get(url, "~/tmp")
 
-                    Print (" Downloading from:" + str(url))
+                    print (" Downloading from:" + str(url))
                     filename = wget.download(url)
                     sDir= str("fda/"+ str(category) + "/" +str(ds) +"/"+str(filename))
 
