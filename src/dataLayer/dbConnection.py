@@ -55,8 +55,8 @@ class DbManager:
         self.desConnect()
         return result
     def insExec(self, sql ):
-        print("##### SQL To Execute #####")
-        print(sql)
+        #print("##### SQL To Execute #####")
+        #print(sql)
         result ={}
         if self.conn is None:
             self.connect()
@@ -67,7 +67,7 @@ class DbManager:
             id  = cur.fetchone()[0]
             # commit changes
             self.conn.commit()
-
+            print "Commit"
             #result = json.dumps(cur.fetchone()[0], indent=2)
             #self.desConnect()
             return id
