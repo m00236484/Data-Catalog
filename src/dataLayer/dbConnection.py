@@ -33,7 +33,7 @@ class DbManager:
 
             # display the PostgreSQL database server version
             db_version = cur.fetchone()
-            print(db_version)
+            #print(db_version)
 
             # close the communication with the PostgreSQL
             self.conn = conn
@@ -54,6 +54,9 @@ class DbManager:
         result = json.dumps(cur.fetchall(), indent=4,  default=str)
         self.desConnect()
         return result
+
+
+
     def insExec(self, sql ):
         #print("##### SQL To Execute #####")
         #print(sql)

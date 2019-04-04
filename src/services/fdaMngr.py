@@ -50,11 +50,11 @@ class FdaAdapter():
                 ds.setDataSet(ds_src_id ,ds_type ,name ,dsUrl,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
-                    print "Download File :" + url
+                    #print "Download File :" + url
                     #r = requests.get(url, "~/tmp")
                     filename = wget.download(url)
                     sDir= str("fda/"+ str(category) + "/" +str(ds) +"/"+str(filename))
-                    print sDir
+                    #print sDir
                     s3.upload_file(filename, "datainsight-dc", sDir)
                     os.remove(filename)
                     #print(r.text)
