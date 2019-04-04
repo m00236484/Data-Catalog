@@ -23,7 +23,7 @@ class DbManager:
             # connect to the PostgreSQL server
             print('Connecting to the PostgreSQL database...')
             #conn = psycopg2.connect(**params)
-                conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host =dbhost, port=dbport)
+            conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host =dbhost, port=dbport)
             # create a cursor
             cur = conn.cursor()
 
