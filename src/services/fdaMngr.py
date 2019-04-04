@@ -46,7 +46,7 @@ class FdaAdapter():
                 dss = DataSetBl()
                 name = "fda/"  + str(category) + "/" + str(ds)
                 store = "fda/"  + str(category) + "/" + str(ds)
-                print "Dataset name :" + name + ", Datasource:" + category +"\n"
+                print "\n Dataset name :" + name + ", Datasource:" + category +"\n  Downloading from:\n" + url
                 dss.setDataSet(ds_src_id ,ds_type ,str(name) ,dsUrl,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
