@@ -43,11 +43,11 @@ class FdaAdapter():
                 dataset = dataSets[ds]
 
                 # Dataset insert ot update last update
-                ds = DataSetBl()
-                name = "fda/"  + str(category) + "/" + str(dataset)
-                store = "'fda/"  + str(category) + "/" + str(ds) +"'"
+                dss = DataSetBl()
+                name = "fda/"  + str(category) + "/" + str(ds)
+                store = "fda/"  + str(category) + "/" + str(ds)
                 print name
-                ds.setDataSet(ds_src_id ,ds_type ,str(name) ,dsUrl,adpter_type_id ,store  ,refesh_frq)
+                dss.setDataSet(ds_src_id ,ds_type ,str(name) ,dsUrl,adpter_type_id ,store  ,refesh_frq)
                 for i in  dataset['partitions']:
                     url =  i['file']
                     #print "Download File :" + url
