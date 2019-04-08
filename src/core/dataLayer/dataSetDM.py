@@ -1,5 +1,5 @@
 
-from dbConnection import DbManager
+from core.dbConnection import DbManager
 
 class DataSet:
     def __init__(self):
@@ -53,7 +53,7 @@ class DataSet:
         '''
 
 
-        sql = "insert into dataset( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values (%s,%s,%s,%s,%s,%s,%s,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)"
+        sql = "insert into dataset_old( ds_src_id ,ds_type ,name ,url,adpter_type_id ,store  ,refesh_frq  ,insert_date , last_update ) values (%s,%s,%s,%s,%s,%s,%s,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)"
 
         data = (ds_src_id, ds_type , name, url,adpter_type_id, store, refesh_frq   )
 

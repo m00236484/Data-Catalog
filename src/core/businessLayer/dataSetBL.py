@@ -1,5 +1,5 @@
 
-from dataLayer.dataSetDM import DataSet
+from core.dataLayer.dataSetDM import DataSet
 
 
 class DataSetBl:
