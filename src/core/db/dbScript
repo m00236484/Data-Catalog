@@ -1,0 +1,142 @@
+
+CREATE DATABASE datacatlog_test;
+
+
+--drop table ds_resources;
+--drop table ds_columns ; 
+--drop table dataset;
+--drop table Dataportal;
+
+create table users 
+(
+id serial primary key,
+user_name varchar CONSTRAINT userName UNIQUE ,
+user_password varchar ,
+aws_cred_id text,
+aws_secret_key text ,
+aws_region text   
+);
+-- create Data Portals table, list all open data portal for available dataset 
+CREATE TABLE IF NOT EXISTS Dataportal
+(
+id serial PRIMARY KEY,
+id_name Text NOT NULL,
+name varchar  NOT NULL CONSTRAINT unName UNIQUE ,
+title varchar,
+url varchar,
+author varchar,
+publisher varchar,
+issued varchar,
+publisher_classification varchar,
+description TEXT,
+tags TEXT [] ,
+license_id varchar, 
+license_url   varchar,
+place TEXT,
+location Text,
+country varchar,
+language Text [],
+status varchar,
+metadatacreated TIMESTAMPTZ,
+generator Text,
+api_endpoint Text,
+api_type Text,
+full_metadata_download TEXT,
+description_html TEXT,
+groups Text[],
+  dc_status varchar,
+	user_created int  REFERENCES users(id), 	
+    Insert_Date TIMESTAMPTZ,
+	user_updated int REFERENCES users(id),  
+    Updated_Date TIMESTAMPTZ
+);
+
+-- create dataset table using  CKAN schema standard 
+CREATE TABLE IF NOT EXISTS dataset
+(
+    id serial PRIMARY KEY,  
+    Dataportal_id int REFERENCES Dataportal(id),	
+    id_ds    varchar         NOT NULL CONSTRAINT unidDs UNIQUE ,    
+    site_id    varchar        NOT NULL,    
+    title    text     ,    
+    entity_type    varchar     ,    
+    dataset_type    varchar     ,    
+    name    varchar     ,   
+    url    varchar     , 	
+    ckan_url    varchar     ,    
+    download_url    varchar     ,
+	dataset_bucket Text , 
+    description TEXT,
+	tags TEXT [] ,
+	license_id    varchar     ,
+	organization    varchar          ,  
+	resource json,
+	visibility integer,
+	author    TEXT     ,    
+    author_email    TEXT     ,    
+    maintainer    TEXT     ,    
+    maintainer_email    TEXT     , 
+    other_info json,
+    groups Text[],	
+    notes    text    ,    
+    license    varchar         ,    
+    ratings_count    int     ,    
+    ratings_average    float     ,        
+    metadata_created    date    ,    
+    metadata_modified    date      ,
+    entry_mode integer ,
+    dc_status varchar,
+	user_created integer REFERENCES users(id), 	
+    Insert_Date TIMESTAMPTZ,
+	user_updated int REFERENCES users(id),
+    Updated_Date TIMESTAMPTZ
+);
+
+-- dataset table metadata and columns name and datatype
+CREATE TABLE IF NOT EXISTS ds_columns
+(
+    id serial primary key ,
+    ds_id integer REFERENCES dataset(id),
+    column_name varchar(100) not null,
+    col_datatype varchar(20) not null,
+    col_size integer,
+     dc_status varchar,
+	user_created integer  REFERENCES users(id), 	
+    Insert_Date TIMESTAMPTZ,
+	user_updated int  REFERENCES users(id),
+    Updated_Date TIMESTAMPTZ
+)	;
+   
+-- dataset table metadata and columns name and datatype
+CREATE TABLE IF NOT EXISTS ds_resources
+(
+    id serial primary key ,
+    ds_id integer REFERENCES dataset(id),
+    resource_type  int,
+    resource_name  varchar,
+    resource_url  Text,
+    resource_bucket Text,
+    dc_status varchar,
+	user_created integer  REFERENCES users(id), 	
+    Insert_Date TIMESTAMPTZ,
+	user_updated int  REFERENCES users(id), 
+    Updated_Date TIMESTAMPTZ
+)	;
+
+
+CREATE TABLE IF NOT EXISTS ds_subscription 
+(
+    id serial primary key ,
+    ds_id integer REFERENCES dataset(id),
+    subscription_id  integer REFERENCES users(id),
+    subscription_start_date TIMESTAMPTZ,
+    subscription_end_date TIMESTAMPTZ,
+    subscription_status int,
+    user_created integer  REFERENCES users(id),
+    Insert_Date TIMESTAMPTZ,
+    user_updated int  REFERENCES users(id),
+    Updated_Date TIMESTAMPTZ
+);
+
+
+
