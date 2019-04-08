@@ -5,7 +5,7 @@ import wget
 import boto3
 import os
 import sys
-from businessLayer.dataSetBL import DataSetBl
+from core.businessLayer.dataSetBL import DataSetBl
 
 class FdaAdapter():
     def __init__(self):
