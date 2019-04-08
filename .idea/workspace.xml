@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea72871b-3851-4dee-951a-1103ebc1111d" name="Default Changelist" comment="" />
+    <list default="true" id="ea72871b-3851-4dee-951a-1103ebc1111d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +21,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="45" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,8 +42,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/core/services/fdaMngr.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/apis/fdaMngr.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
               <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
@@ -86,11 +91,11 @@
         <option value="$PROJECT_DIR$/src/DataLayer/dataset.py" />
         <option value="$PROJECT_DIR$/src/DataLayer/dm_dataset.py" />
         <option value="$PROJECT_DIR$/src/business_layer/bl_DataSet.py" />
-        <option value="$PROJECT_DIR$/src/app.py" />
         <option value="$PROJECT_DIR$/src/businessLayer/dataSetBL.py" />
         <option value="$PROJECT_DIR$/src/dataLayer/dataSetDM.py" />
         <option value="$PROJECT_DIR$/src/dataLayer/dbConnection.py" />
         <option value="$PROJECT_DIR$/src/services/fdaMngr.py" />
+        <option value="$PROJECT_DIR$/src/app.py" />
       </list>
     </option>
   </component>
@@ -111,6 +116,11 @@
             <path>
               <item name="Data-Catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Data-Catalog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Data-Catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Data-Catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Data-Catalog" type="b2602c69:ProjectViewProjectNode" />
@@ -508,7 +518,28 @@
       <option name="project" value="LOCAL" />
       <updated>1554748813994</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add dataset class">
+      <created>1554749061174</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1554749061174</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add dataset class">
+      <created>1554749088276</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1554749088276</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add dataset class">
+      <created>1554749219061</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1554749219061</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -518,7 +549,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32867134" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -567,17 +598,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="add dataset class" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/core/services/ds_download.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/ds_download.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/nested_json.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/nested_json.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/parse_json.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/parse_json.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/d" />
-    <entry file="file://$PROJECT_DIR$/src/core/services/fdi_api.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/fdi_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
           <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
@@ -587,7 +618,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/ds_dmg.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/ds_dmg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
@@ -597,7 +628,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/fdiMng.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/fdiMng.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="31" column="38" lean-forward="true" selection-end-line="37" />
@@ -607,7 +638,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/config.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
@@ -627,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/src/core/businessLayer/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataLayer/dataset.py" />
@@ -645,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/dataLayer/dbConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -666,12 +690,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/services/fdaMngr.py">
+    <entry file="file://$PROJECT_DIR$/src/core/apis/fdaMngr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
