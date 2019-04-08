@@ -1,5 +1,5 @@
 
-from core.dbConnection import DbManager
+from dbConnection import DbManager
 
 class DataSet:
     def __init__(self):
