@@ -67,7 +67,8 @@ class DbManager:
         try:
             cur = self.conn.cursor()
             cur.execute(sql, data)
-            #id  = cur.fetchone()[0]
+            id  = cur.fetchone()[0]
+
             # commit changes
             self.conn.commit()
             #print "Commit"
