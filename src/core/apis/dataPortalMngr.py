@@ -1,8 +1,8 @@
 import urllib2
 import json
 import datetime
-from core.dataLayer.dataPortal import DataPortal
-#from core.businessLayer.dataSetBL import DataSetBl
+from DataCatalog.src.core.dataLayer.dataPortal import DataPortal
+
 
 class DataPortalMng():
     def __init__(self):
@@ -22,9 +22,9 @@ class DataPortalMng():
         try:
             response = urllib2.urlopen(url ,timeout = 10)
             code = response.getcode()
-        except urllib2.HTTPError, e:
+        except urllib2.HTTPError as  e:
             code =  e.code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             code = 999
         except:
             code = 1000
