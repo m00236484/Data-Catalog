@@ -72,20 +72,33 @@ class DataPortal:
                          user_updated, Updated_Date):
         dbconn = DbManager()
 
+
+        sql = "Insert Into DataPortal (id_name  ,name ,title ,url ,author ,publisher ," \
+              "issued ,publisher_classification ,description ,tags  ,license_id ,license_url   ,place ,location," \
+              "country ,language,status ,metadatacreated ,generator ,api_endpoint ,api_type ,full_metadata_download," \
+              "description_html ,groups ,dc_status ,user_created ,user_updated ,Insert_Date  ,Updated_Date) VALUES " \
+              "(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)"
+
+        '''
         sql = "Insert Into DataPortal (id_name  ,name ,title ,url ,author ,publisher ," \
               "issued ,publisher_classification ,description ,tags  ,license_id ,license_url   ,place ,location," \
               "country ,language,status ,metadatacreated ,generator ,api_endpoint ,api_type ,full_metadata_download," \
               "description_html ,groups ,dc_status ,user_created ,Insert_Date ,user_updated ,Updated_Date) VALUES " \
-              "(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+              "(%(id_name)s,%(name)s,%(title)s,%(url)s,%(author)s,%(publisher)s,%(issued)s,%(publisher_classification)s,%(description)s,[],%(license_id)s, %(license_url)s, %(place)s, %(location)s, %(country)s, [], %(status)s, %(metadatacreated)s, %(generator)s, %(api_endpoint)s, %(api_type)s, %(full_metadata_download)s, %(description_html)s, [], %(dc_status)s, %(user_created)s, CURRENT_TIMESTAMP, %(user_updated)s, CURRENT_TIMESTAMP)"
+        
+        '''
 
-        data = (id_name, name, title, url, author, publisher, issued,
-                publisher_classification, description, tags, license_id, license_url,
-                place, location, country, language, status, metadatacreated,
-                generator, api_endpoint, api_type, full_metadata_download,
-                description_html, groups, dc_status, user_created, Insert_Date,
-                user_updated, Updated_Date)
+        data = (id_name, name, title, url, author, publisher, issued,publisher_classification, description, tags,
+                license_id, license_url,place, location, country, language, status, metadatacreated,generator,
+                api_endpoint, api_type, full_metadata_download,description_html, groups, dc_status, user_created,
+                user_updated)
 
-        return id
+
+        #print data
+        dbconn.insExec(sql,data)
+
+
+
 
     def getDataPortalId(self, name):
         return self.id

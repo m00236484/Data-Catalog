@@ -23,6 +23,9 @@ class DbManager:
             # connect to the PostgreSQL server
             # print('Connecting to the PostgreSQL database...')
             # conn = psycopg2.connect(**params)
+            psycopg2.extensions.register_type(psycopg2.extensions.BYTES)
+            psycopg2.extensions.register_type(psycopg2.extensions.BYTESARRAY)
+
             conn = psycopg2.connect(dbname=db, user=dbuser, password=dbpass, host=dbhost, port=dbport)
             # create a cursor
             cur = conn.cursor()
@@ -55,23 +58,24 @@ class DbManager:
         return result
 
     def insExec(self, sql, data):
-        # print("##### SQL To Execute #####")
-        # print(sql)
+
         result = {}
+
+
         if self.conn is None:
             self.connect()
 
         try:
             cur = self.conn.cursor()
             cur.execute(sql, data)
-            id = cur.fetchone()[0]
+            #id = cur.fetchone()[0]
 
             # commit changes
             self.conn.commit()
             # print "Commit"
             # result = json.dumps(cur.fetchone()[0], indent=2)
             # self.desConnect()
-            return id
+            #return id
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
 
