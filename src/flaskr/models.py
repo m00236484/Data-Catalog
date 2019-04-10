@@ -1,6 +1,8 @@
-from app import db
-from sqlalchemy.dialects.postgresql import JSON
 
+from flask_sqlalchemy import SQLAlchemy
+import datetime
+
+db = SQLAlchemy()
 
 class BaseModel(db.Model):
     """Base data model for all objects"""
