@@ -3,7 +3,7 @@ from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
 from src.core.businessLayer.dataSetBL import DataSetBl
 from src.core.apis.fdaMngr import FdaAdapter
-from src.core.dataLayer.dataportal import DataPortal
+from src.core.dataLayer.dataPortal import DataPortal
 
 seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
                                       datetime.min.time())
