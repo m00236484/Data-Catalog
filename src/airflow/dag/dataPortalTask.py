@@ -3,8 +3,8 @@ sys.path.append('../')
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
-from core.apis.fdaMngr import FdaAdapter
-from core.dataLayer.dataPortal import DataPortal
+from src.core.apis.fdaMngr import FdaAdapter
+from src.core.dataLayer.dataPortal import DataPortal
 
 seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
                                       datetime.min.time())
