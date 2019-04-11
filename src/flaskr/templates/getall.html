@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!doctype html>
+<title>{% block title %}{% endblock %} - Dataset Catalog</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>Data Portal</h1>
+
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+
+
+  {% block content %}
+         <label for="name">item.name</label>
+      {% for item in data%}
+
+        item
+    {% endfor %}
+
+
+    {% endblock %}
+</section>
+
+

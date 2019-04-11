@@ -1,12 +1,16 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
 from flask import jsonify
-
+from flask_bootstrap import Bootstrap
+from jinja2 import Template
+import json
 
 app = Flask(__name__)
 
 db = SQLAlchemy()
 from models import db
+Bootstrap(app)
 
 POSTGRES = {
     'user': 'postgres',
@@ -16,6 +20,7 @@ POSTGRES = {
     'port': '5432',
 }
 app.config['DEBUG'] = True
+DEBUG = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 db.init_app(app)
@@ -24,14 +29,28 @@ from models import DataPortal
 
 @app.route("/")
 def main():
-    return 'Data Portal List'
+    #return 'Data Portal List'
+
+    return render_template('base.html')
 
 
-@app.route("/getall")
+@app.route("/dataportal/getall")
 def get_all():
     try:
         dataPortal=DataPortal.query.all()
-        return  jsonify([e.serialize() for e in dataPortal])
+
+        return render_template('getall.html', data=dataPortal)
+
+        if request.args['type'] == 'json':
+            data = jsonify([e.serialize() for e in dataPortal])
+            return jsonify(data=data)
+        else:
+            return render_template('getall.html', data=dataPortal)
+
+
+
+
+
     except Exception as e:
 	    return(str(e))
 
