@@ -1,13 +1,13 @@
+from os import path
 import sys
+sys.path.append(path.abspath('/home/ubuntu/Data-Catalog/Data-Catalog/src/'))
 
-import os.path
-print os.path.abspath(os.path.join(sys.path.append('../'), os.pardir))
-
+from core.apis.fdaMngr import FdaAdapter
+from core.dataLayer.dataPortal import DataPortal
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
-from src.core.apis.fdaMngr import FdaAdapter
-from src.core.dataLayer.dataPortal import DataPortal
+
 
 seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
                                       datetime.min.time())
