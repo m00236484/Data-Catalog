@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea72871b-3851-4dee-951a-1103ebc1111d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/airflow/dag/dataPortalTask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/airflow/dag/fdaTask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/airflow/dag/scripts/dataPortal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flaskr/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flaskr/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flaskr/templates/getall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flaskr/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flaskr/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/airflow/dag/dataPortalTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/airflow/dag/dataPortalTask.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/airflow/dag/dataPortalTask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -155,6 +145,24 @@
               <item name="Data-Catalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/PycharmProjects/Data-Catalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Data-Catalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/PycharmProjects/Data-Catalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Data-Catalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/PycharmProjects/Data-Catalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dataLayer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Data-Catalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/PycharmProjects/Data-Catalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tmp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -320,13 +328,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553728203339</updated>
-    </task>
-    <task id="LOCAL-00017" summary="add dataset class">
-      <created>1554341421393</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1554341421393</updated>
     </task>
     <task id="LOCAL-00018" summary="add dataset class">
       <created>1554341510808</created>
@@ -664,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554939334598</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="add dataset class">
+      <created>1555021889468</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1555021889469</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -884,11 +892,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/airflow/dag/dataPortalTask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
