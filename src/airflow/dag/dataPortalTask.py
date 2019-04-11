@@ -1,7 +1,7 @@
 import sys
-sys.path.append('../')
+
 import os.path
-print os.path.abspath(os.path.join(yourpath, os.pardir))
+print os.path.abspath(os.path.join(sys.path.append('../'), os.pardir))
 
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
