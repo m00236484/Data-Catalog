@@ -14,7 +14,7 @@ seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
 def dataPortal(ds, **kwargs):
     #fdAd = FdaAdapter()
     #fdAd.processResponse(fdAd.getDsRequest())
-    print "Test Workflow"
+
     dp = DataPortal()
     dp.createDataPortal()
 
