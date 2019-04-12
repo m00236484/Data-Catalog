@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
-
+from core.dataPortal import DataPortal
 from airflow.operators import PythonOperator
 
-from core.dataPortal import DataPortal
+
 
 seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
                                   datetime.min.time())
