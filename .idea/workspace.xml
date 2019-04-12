@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea72871b-3851-4dee-951a-1103ebc1111d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/apis/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/apis/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/apis/dataPortalMngr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dataPortalMngr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/apis/fdaMngr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/fdaMngr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/dataLayer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/dataLayer/dataPortal.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dataPortal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/dataLayer/dataSetDM.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dataSetDM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/dataLayer/dbConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dbConnection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/dataLayer/dcManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dcManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dag/dataPortalTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dag/dataPortalTask.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +25,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dag/dataPortalTask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/dcManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -38,6 +54,9 @@
       <find>user_id</find>
       <find>Response</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/core</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -126,24 +145,6 @@
               <item name="~/projects/dsCatalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="dsCatalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/projects/dsCatalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dsCatalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/projects/dsCatalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dag" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dsCatalog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/projects/dsCatalog" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="elasticsearch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -153,7 +154,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/airflow" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/core" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -166,11 +167,11 @@
       <recent name="$PROJECT_DIR$/src/DataLayer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/airflow" />
       <recent name="$PROJECT_DIR$/src/airflow/dag/scripts" />
       <recent name="$PROJECT_DIR$/src/flaskr/templates" />
       <recent name="$PROJECT_DIR$/src/services" />
-      <recent name="$PROJECT_DIR$/src/businessLayer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -310,13 +311,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553728203339</updated>
-    </task>
-    <task id="LOCAL-00030" summary="add dataset class">
-      <created>1554344236244</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1554344236244</updated>
     </task>
     <task id="LOCAL-00031" summary="add dataset class">
       <created>1554344327019</created>
@@ -654,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555028604625</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="clean up some files">
+      <created>1555028899005</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1555028899006</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -887,13 +888,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/dcManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dag/dataPortalTask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>

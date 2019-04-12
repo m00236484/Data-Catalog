@@ -1,8 +1,8 @@
 from os import path
 import sys
 
-from core.apis.fdaMngr import FdaAdapter
-from core.dataLayer.dataPortal import DataPortal
+from core.fdaMngr import FdaAdapter
+from core.dataPortal import DataPortal
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
