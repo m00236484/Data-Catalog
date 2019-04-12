@@ -1,7 +1,7 @@
 from os import path
 import sys
 
-from core.fdaMngr import FdaAdapter
+from src.core.fdaMngr import FdaAdapter
 from core.dataPortal import DataPortal
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
