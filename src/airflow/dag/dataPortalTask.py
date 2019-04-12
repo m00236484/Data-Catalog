@@ -1,9 +1,8 @@
 from os import path
 import sys
-sys.path.append(path.abspath('/home/ubuntu/Data-Catalog/Data-Catalog/src/'))
 
-from core.apis.fdaMngr import FdaAdapter
-from core.dataLayer.dataPortal import DataPortal
+from dsCatalog.src.core.apis.fdaMngr import FdaAdapter
+from dsCatalog.src.core.dataLayer.dataPortal import DataPortal
 from airflow import DAG
 from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
