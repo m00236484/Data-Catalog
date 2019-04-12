@@ -2,7 +2,7 @@ import datetime
 import json
 
 import urllib2
-from dataLayer.dataPortal import DataPortal
+from dataPortal import DataPortal
 
 
 class DataPortalMng():

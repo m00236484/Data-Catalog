@@ -1,4 +1,4 @@
-from core.dataLayer.dataportal import DataPortal
+from core.dataportal import DataPortal
 
 if __name__ == '__main__':
     # fdAd = FdaAdapter()

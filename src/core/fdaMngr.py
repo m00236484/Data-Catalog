@@ -4,7 +4,7 @@ import urllib
 
 import boto3
 import wget
-from core.businessLayer.dataSetBL import DataSetBl
+from core.dataSetBL import DataSetBl
 
 
 class FdaAdapter():
