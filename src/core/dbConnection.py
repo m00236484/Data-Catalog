@@ -1,11 +1,9 @@
 #!/usr/bin/python
-from psycopg2.extras import RealDictCursor
-import psycopg2
-import datetime
-import json
-
 # from config import config
 import json
+
+import psycopg2
+from psycopg2.extras import RealDictCursor
 
 
 class DbManager:
@@ -61,21 +59,20 @@ class DbManager:
 
         result = {}
 
-
         if self.conn is None:
             self.connect()
 
         try:
             cur = self.conn.cursor()
             cur.execute(sql, data)
-            #id = cur.fetchone()[0]
+            # id = cur.fetchone()[0]
 
             # commit changes
             self.conn.commit()
             # print "Commit"
             # result = json.dumps(cur.fetchone()[0], indent=2)
             # self.desConnect()
-            #return id
+            # return id
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
 

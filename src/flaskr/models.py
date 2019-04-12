@@ -1,14 +1,14 @@
-
-from flask_sqlalchemy import SQLAlchemy
 import datetime
 
-
+from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
+
 
 class BaseModel(db.Model):
     """Base data model for all objects"""
     __abstract__ = True
+
     # define here __repr__ and json methods or any common method
     # that you need for all your models
     def __init__(self, *args):
@@ -61,16 +61,15 @@ class DataPortal(db.Model):
     dc_status = db.Column(db.String())
     user_created = db.Column('user_created', db.Integer, db.ForeignKey("users.user_id"), nullable=True)
     user_updated = db.Column('user_updated', db.Integer, db.ForeignKey("users.user_id"), nullable=True)
-    insert_date  = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    insert_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     updated_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
-
     def __init__(self, id_name, name, title, url, author, publisher, issued,
-                         publisher_classification, description, tags, license_id, license_url,
-                         place, location, country, language, status, metadatacreated,
-                         generator, api_endpoint, api_type, full_metadata_download,
-                         description_html, groups, dc_status, user_created,
-                         user_updated, insert_date,updated_date):
+                 publisher_classification, description, tags, license_id, license_url,
+                 place, location, country, language, status, metadatacreated,
+                 generator, api_endpoint, api_type, full_metadata_download,
+                 description_html, groups, dc_status, user_created,
+                 user_updated, insert_date, updated_date):
         self.id = id
         self.id_name = id_name
         self.name = name

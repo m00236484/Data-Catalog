@@ -1,4 +1,6 @@
 from dbConnection import DbManager
+
+
 class DataPortal:
     def __init__(self):
         self.id = None
@@ -72,7 +74,6 @@ class DataPortal:
                          user_updated, Updated_Date):
         dbconn = DbManager()
 
-
         sql = "Insert Into DataPortal (id_name  ,name ,title ,url ,author ,publisher ," \
               "issued ,publisher_classification ,description ,tags  ,license_id ,license_url   ,place ,location," \
               "country ,language,status ,metadatacreated ,generator ,api_endpoint ,api_type ,full_metadata_download," \
@@ -88,17 +89,13 @@ class DataPortal:
         
         '''
 
-        data = (id_name, name, title, url, author, publisher, issued,publisher_classification, description, tags,
-                license_id, license_url,place, location, country, language, status, metadatacreated,generator,
-                api_endpoint, api_type, full_metadata_download,description_html, groups, dc_status, user_created,
+        data = (id_name, name, title, url, author, publisher, issued, publisher_classification, description, tags,
+                license_id, license_url, place, location, country, language, status, metadatacreated, generator,
+                api_endpoint, api_type, full_metadata_download, description_html, groups, dc_status, user_created,
                 user_updated)
 
-
-        #print data
-        dbconn.insExec(sql,data)
-
-
-
+        # print data
+        dbconn.insExec(sql, data)
 
     def getDataPortalId(self, name):
         return self.id

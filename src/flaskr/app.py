@@ -1,15 +1,14 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask import render_template
 from flask import jsonify
+from flask import render_template
 from flask_bootstrap import Bootstrap
-from jinja2 import Template
-import json
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 db = SQLAlchemy()
 from models import db
+
 Bootstrap(app)
 
 POSTGRES = {
@@ -27,9 +26,10 @@ db.init_app(app)
 
 from models import DataPortal
 
+
 @app.route("/")
 def main():
-    #return 'Data Portal List'
+    # return 'Data Portal List'
 
     return render_template('base.html')
 
@@ -37,7 +37,7 @@ def main():
 @app.route("/dataportal/getall")
 def get_all():
     try:
-        dataPortal=DataPortal.query.all()
+        dataPortal = DataPortal.query.all()
 
         return render_template('getall.html', data=dataPortal)
 
@@ -52,9 +52,8 @@ def get_all():
 
 
     except Exception as e:
-	    return(str(e))
+        return (str(e))
+
 
 if __name__ == '__main__':
-
     app.run()
-
