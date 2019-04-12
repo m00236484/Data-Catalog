@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../DataCatalog">
-      <sourceFolder url="file://$MODULE_DIR$/../DataCatalog/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../DataCatalog" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/../DataCatalog" />
+    <content url="file://$MODULE_DIR$/src">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

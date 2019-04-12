@@ -1,12 +1,8 @@
-from os import path
-import sys
-
-from src.core.fdaMngr import FdaAdapter
-from core.dataPortal import DataPortal
-from airflow import DAG
-from airflow.operators import BashOperator,PythonOperator
 from datetime import datetime, timedelta
 
+from airflow.operators import PythonOperator
+
+from core.dataPortal import DataPortal
 
 seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
                                       datetime.min.time())
